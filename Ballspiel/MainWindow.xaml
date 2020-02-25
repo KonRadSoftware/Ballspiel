@@ -1,0 +1,16 @@
+﻿<Window x:Class="Ballspiel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ballspiel"
+        mc:Ignorable="d"
+        Title="Konrads Ballspiel" Height="450" Width="800" KeyUp="Ball_KeyUp" KeyDown="Window_KeyDown">
+    <Grid>
+        <Button Content="Start/Stop" Name="cmdStartStop" HorizontalAlignment="Left" Margin="38,10,0,0" VerticalAlignment="Top" Width="80" Click="cmdStartStop_Click"/>
+        <Label Content="0 Clicks" Name="lblSpielstand" HorizontalAlignment="Left" Margin="53,43,0,0" VerticalAlignment="Top"/>
+        <Canvas x:Name="Spielfeld" Margin="175,0,0,0" Background="Azure">
+            <Ellipse Name="Ball" Width="25" Height="25" Fill="DarkGreen" Canvas.Left="100" Canvas.Top="100" MouseDown="Ball_MouseUp"></Ellipse>
+        </Canvas>
+    </Grid>
+</Window>
